@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zapri škatlo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>ZAPRI ŠKATLO</h1>
+    <div class="playersNumberDiv">
+      <h2>Vnesi število igralcev</h2>
+      <input type="number" class="playersNumber">
+      <button class="potrdi">Potrdi</button>
+    </div>
+    <div class="pravila">
+      <h2>Pravila</h2>
+      <p>Na začetku igre so vse ploščice "odprte" in prikazujejo številke od 1 do 12.<br><br>
+
+        Med igro vsak igralec igra po vrsti. Igralec začne svojo potezo s tem, da vrže kocki.<br><br>
+        
+        Po metu igralec sešteje pikice na kockah in nato "zapre" eno od kombinacij odprtih številk, ki skupaj tvorijo skupno število pik, prikazanih na kockah. Na primer, če je skupno število pik 8, lahko igralec izbere katero koli od naslednjih nizov številk (dokler so vse številke v nizu na voljo za zakritje):<br><br>
+        
+        8 <br>
+        7, 1 <br>
+        6, 2 <br>
+        5, 3 <br>
+        5, 2, 1 <br>
+        4, 3, 1 <br><br>
+        
+        Igralec nato ponovno vrže kocki in si prizadeva zapreti več številk. Igralec nadaljuje z metanjem kock in zapiranjem številk, dokler ne doseže točke, kjer, ob upoštevanju rezultatov, ki jih proizvedejo kocke, ne more več zapreti nobenih številk. Takrat se seštejejo vsa polja, ki ostanejo odprta. <br><br>Na primer, če so številke 2, 3 in 5 še vedno odprte, ko igralec ne more več zapreti nobenih polj, dobi igralec 10 točk (2 + 3 + 5 = 10). Igro nato nadaljuje naslednji igralec.<br><br>
+        
+        Ko vsak igralec opravi potezo, igralec z najnižjim rezultatom zmaga.
+        </p>
+      <button class="zapri" onclick="zapri()">Zapri</button>
+    </div>
+
+    <div class="startScreen">
+
+      
+      
+      <div class="buttons">     
+        <button class="startBtn" onclick="playersInput()">Igral bi z družbo</button>
+        <button class="racBtn" onclick="location.href='game.html'">Igral bi z <br>računalnikom</button> 
+        <button class="pravilaBtn" onclick="pravila()">Pravila</button>
+      </div>
+ 
+    </div>
+
+  </div>
+
+  
+  <script src="index.js"></script>
+</body>
+</html>

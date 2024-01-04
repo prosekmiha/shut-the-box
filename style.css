@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Roboto:ital,wght@0,500;0,900;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Asap', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--colorShadeA);
+
+}
+
+.container {
+  position: relative;
+  display: flex;
+  max-width: 960px;
+  width: 960px;
+  background-color: #f1faee;
+  height: 96vh;
+  border-radius: 10px;
+  margin: 2vh; 
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+h1 {
+
+  margin: auto;
+  font-size: 4rem;
+  font-weight: 600;
+  background-image: linear-gradient(to left, var(--colorShadeB), var(--colorShadeA));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.startScreen {
+
+  top: -100px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+}
+
+.playersNumberDiv, .pravila {
+  height: 400px;
+  width: 500px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: auto;
+  background-color: #f1faee;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px solid rgb(121, 186, 156);
+  box-shadow: -2px -1px 59px 8px rgba(0,0,0,0.28);
+  -webkit-box-shadow: -2px -1px 59px 8px rgba(0,0,0,0.28);
+  -moz-box-shadow: -2px -1px 59px 8px rgba(0,0,0,0.28); 
+  visibility: hidden;
+}
+
+.pravila {
+  height: 800px;
+  width: 600px;
+}
+
+.pravilaBtn {
+  height: 80px !important;
+  width: 200px !important;
+  margin: auto !important; 
+  margin-top: 100px !important;
+}
+
+
+.playersNumberDiv h2{ 
+  position: relative;
+  margin: auto;
+
+}
+
+.playersNumberDiv button {
+  position: relative;
+}
+
+.playersNumber {
+  height: 5vh;
+  width: 5vw;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: auto;
+
+  
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.playerNumberTxt {
+  font-size: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+}
+
+.buttons button {
+  margin: 50px;
+  height: 100px;
+}
+
+
+.playerNumberTxt {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.kocki {
+  display: flex;
+  flex-direction: column;
+}
+
+.kocka {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.loputice {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 80%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+
+.loputica {
+  margin: 15px;
+  position: relative;
+  border-radius: 50%;
+  height: 10vh;
+  width: 10vh;
+  background-color: white;
+
+}
+
+
+
+.midGame {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3vh;
+  margin-bottom: 10vw;
+}
+
+.midGame button {
+  width: 10vw;
+  height: 8vh;
+
+}
+
+.endGame {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3vh;
+}
+
+.score {
+  position: relative;
+  margin-bottom: 10vh;
+}
+
+.score p {
+  font-size: 2rem;
+
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+  border-radius: 1em;
+  background: var(--colorShadeE);
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  margin: 3vh;
+  text-align: justify;
+  text-align: center;
+}
+
+
+button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--colorShadeC);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+button:hover {
+  background: var(--colorShadeD);
+  transform: translate(0, 0.375em);
+}
+
+button:hover::before {
+  transform: translate3d(0, 0.75em, -1em);
+}
+
+button:active {
+  transform: translate(0em, 0.75em);
+}
+
+button:active::before {
+  transform: translate3d(0, 0, -1em);
+
+  box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+}
+
+:root {
+  --backgroundColor: rgba(246, 241, 209);
+  --colorShadeA: rgb(106, 163, 137);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232);
+}
+
+.winner {
+  font-size: 1.2rem;
+  margin: 50px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 500px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  button {font-size: 2rem; padding: 0;}
+  .buttons button {height: 200px; width: 300px; }
+  .midGame button {height: 160px; width: 300px;}
+  .midGame {flex-direction: row;}
+  .loputica {margin: 25px;}
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  button {font-size: 1.3rem; padding: 0;}
+  .buttons button {height: 100px; width: 300px; }
+  .midGame button {height: 100px; width: 200px;}
+  .midGame {flex-direction: row;}
+  .loputica {margin: 20px;}
+  .newGameBtn {height: 120px; width: 200px;}
+  .endGame p {font-size: 2rem;}
+  .score p {font-size: 2rem;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  button {font-size: 1rem; padding: 1em 2em;}
+  .midGame button {height: 80px; width: 180px;}
+  .midGame {flex-direction: column;}
+  .loputica {margin: 13px;}
+  .newGameBtn {height: 120px; width: 200px;}
+  .endGame p {font-size: 2rem;}
+  .score p {font-size: 2rem;}
+}
+
